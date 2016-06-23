@@ -1,0 +1,74 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+kapt {
+    generateStubs = true
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        applicationId "com.mk.giphy"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    compile files("/build/generated/source/kapt/")
+    testCompile 'junit:junit:4.12'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'com.android.support:support-annotations:23.4.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+
+    compile 'org.apache.commons:commons-lang3:3.4'
+
+    compile 'io.reactivex:rxandroid:1.2.0'
+    compile 'io.reactivex:rxjava:1.1.5'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-kotlin:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7-kotlin:0.4.0'
+
+//    compile 'com.github.bumptech.glide:glide:3.7.0'
+//    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    compile 'com.github.bumptech.glide:glide:3.8.0-SNAPSHOT'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0-SNAPSHOT'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.1.16'
+//    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    compile 'com.facebook.fresco:fresco:0.11.0'
+    compile 'com.facebook.fresco:animated-gif:0.11.0'
+
+    kapt 'com.android.databinding:compiler:2.2.0-alpha3'
+//    compile 'com.android.databinding:compiler:2.2.0-alpha3'
+}
+repositories {
+    mavenCentral()
+}

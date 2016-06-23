@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="glide-3.8.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.8.0-SNAPSHOT/e4365b7410d5aa126a20f8649f46ee8e4deb7975/glide-3.8.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.8.0-SNAPSHOT/d667288ad5ba6eb22d396ac502457a602d99b298/glide-3.8.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
